@@ -1,0 +1,20 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "Installation and configuration:",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.7.3",
+    "chartjs-node": "^1.7.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
