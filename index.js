@@ -1,12 +1,11 @@
 const request= require("request")
 const imaging = require("./lib/imaging.js")
 
-const DATA_URL = 'http://localhost:5000/api/prices';
+const DATA_URL = 'http://localhost:5000/api/prices?v2900';
 
 const IMG_REFRESH_INTERVAL = 30*60*1000;
 const IMG_WIDTH = 138
 const IMG_HEIGHT = 26
-var renderInterval=0;
 
 function getLatestData() {
     request(DATA_URL, { json: true }, (err, res, body) => {
@@ -24,8 +23,9 @@ function generateImages(historicalPrices) {
 }
 
 function render(name, timeseries, fieldName) {
-    var sparklineData = timeseries.map(x => x[fieldName])
-    imaging.drawChart(sparklineData, name.toLowerCase(), 130, 130)
+    let t= timeseries.slice(0, 98);
+    var sparklineData = t.map(x => x.close)
+    imaging.drawChart(sparklineData, name.toLowerCase(), 600, 600)
 
 }
 
