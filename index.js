@@ -1,7 +1,7 @@
 const request= require("request")
 const imaging = require("./lib/imaging.js")
 
-const DATA_URL = 'http://localhost:5000/api/prices?v2900';
+const DATA_URL = 'http://localhost:5000/api/prices?xyz123';
 
 const IMG_REFRESH_INTERVAL = 30*60*1000;
 const IMG_WIDTH = 138
