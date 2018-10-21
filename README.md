@@ -21,7 +21,7 @@ Running the sprite service:
 
 Starting the Sprite Service
 
-nohup sudo dotnet bct-sprite-service.dll
+sudo pm2 start "dotnet bct-sprite-service.dll" data_service -f
 curl "http://localhost:5000/api/admin/config?batchSize=10&candleSize=2&numCandles=50&quoteCurrency=USD"
 curl http://localhost:5000/api/admin/start
 curl http://localhost:5000/api/admin/status
@@ -37,7 +37,16 @@ Then paste the following into your command line
 sudo apt install pkg-config              #the dependencies require it
 sudo apt-get install build-essential 
 npm install --save                       #  may need sudo
+
+TESTING
 sudo PORT=80 nohup node app.js           #  unsafe! use a real web server.
+
+Production
+#pm2 keeps the app running after you logout and restarts it if it dies.
+#like a standard linux service but much more usable
+sudo npm install -g pm2
+sudo pm2 start "node app.js" image_service -f
+
 
 #IF NECESSARY
 sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev
