@@ -1,5 +1,5 @@
 
-5. Start the service via npm start. Chart images will be rendered, saved to the charts folder, and will be available on the URL http://host:port/charts/[coin name].png 
+5. Start the service via npm start. Chart images will be rendered, uploaded to a public HTTPS bucket on Google Cloud, and will be available on the URL https://storage.googleapis.com/bct-images/charts/[coin name].png 
 
 
 ---
