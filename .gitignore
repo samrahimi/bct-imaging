@@ -8,7 +8,7 @@ yarn-error.log*
 # generated output
 charts
 charts/*
-
+cloud_storage_credentials.json
 # Runtime data
 pids
 *.pid
