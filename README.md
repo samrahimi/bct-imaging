@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-5. Start the service via npm start. Chart images will be rendered, uploaded to a public HTTPS bucket on Google Cloud, and will be available on the URL https://storage.googleapis.com/bct-images/charts/[coin name].png 
-
-
-=======
->>>>>>> master
 ---
 Prerequisites:
 1. A running instance of the sprite service (it provides cached, near-real-time short term OHLC data to bct-imaging). If the sprite service is running on the same machine as you will be running the imaging service, you do not need to change any settings. If it is on a separate host, please update DATA_URL in index.js to match.
