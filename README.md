@@ -1,7 +1,4 @@
 
-5. Start the service via npm start. Chart images will be rendered, uploaded to a public HTTPS bucket on Google Cloud, and will be available on the URL https://storage.googleapis.com/bct-images/charts/[coin name].png 
-
-
 ---
 Prerequisites:
 1. A running instance of the sprite service (it provides cached, near-real-time short term OHLC data to bct-imaging). If the sprite service is running on the same machine as you will be running the imaging service, you do not need to change any settings. If it is on a separate host, please update DATA_URL in index.js to match.
@@ -14,17 +11,19 @@ Running the sprite service:
 
 2. git clone https://github.com/samrahimi/bct-imaging.git && cd ./bct-imaging/binaries
 
-3. nohup sudo dotnet bct-sprite-service.dll
-
-(to build the sprite service: dotnet publish --configuration Release on the server, your workstation, or any other system that has .net core runtime and build tools installed. The resulting output folder should be copied to the server, then proceed to step 3 above)
-
-
-Starting the Sprite Service
+3. Start and Configure:
 
 sudo pm2 start "dotnet bct-sprite-service.dll" data_service -f
 curl "http://localhost:5000/api/admin/config?batchSize=10&candleSize=2&numCandles=50&quoteCurrency=USD"
 curl http://localhost:5000/api/admin/start
 curl http://localhost:5000/api/admin/status
+
+If you did everything right, the status will show that it is running.
+
+(to build the sprite service: dotnet publish --configuration Release on the server, your workstation, or any other system that has .net core runtime and build tools installed. The resulting output folder should be copied to the server, then proceed to step 3 above)
+
+
+Starting the Chart Service
 
 
 Installing 
