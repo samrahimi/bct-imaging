@@ -10,7 +10,7 @@ charts
 charts/*
 
 #credentials
-cloud_storage_credentials.json
+cloud_storage_credentials.*
 
 # Runtime data
 pids
