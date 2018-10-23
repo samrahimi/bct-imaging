@@ -3,7 +3,7 @@ const imaging = require("./lib/imaging.js")
 
 const DATA_URL = 'http://localhost:5000/api/prices?xyz123';
 
-const IMG_REFRESH_INTERVAL = 30*60*1000; //testing
+const IMG_REFRESH_INTERVAL = 3*60*1000; //testing
 const IMG_WIDTH = 138
 const IMG_HEIGHT = 26
 
